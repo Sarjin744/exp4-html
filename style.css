@@ -1,0 +1,186 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('images/bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #001f3f, #00509e);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar h1 span {
+  color: #00bfff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #00bfff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Landing Section */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Glass Login Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease;
+}
+
+.login-card h2 {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #00bfff;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #ccc;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -15px;
+  font-size: 0.8rem;
+  color: #00bfff;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #0077ff, #00d4ff);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+}
+
+/* Note text */
+.note {
+  margin-top: 15px;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.note a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.note a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
